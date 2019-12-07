@@ -93,8 +93,8 @@ $('.sliderSectionPPL').slick({
   function setCounter() {
     let value = +circleNumber.innerText;
     setInterval(() => {
-      if (value < 15800) {
-        value = +value + 25;
+      if (value < 15824) {
+        value = +value + 8;
         circleNumber.innerText = value;
       }
     }, 0.1);
