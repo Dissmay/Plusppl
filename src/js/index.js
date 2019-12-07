@@ -198,11 +198,9 @@ $('.sliderSectionPPL').slick({
   let buffer = $('.navigation__copyBtn');
 
 
-  var url = document.location.href;
+  var url = get_page_uri();
   new Clipboard('.navigation__copyBtn', {text: function(){ return url;}});
-  buffer.on('click', function(){
-    
-  });
+
 });
 
   
