@@ -9,6 +9,7 @@ $('.sliderSectionPPL').slick({
   centerMode: true,
   centerPadding: '1x',
   slidesToShow: 1,
+  autoplay: true,
   prevArrow: $('.sliderSectionPPL__btn_prev'),
   nextArrow: $('.sliderSectionPPL__btn_next')
   
@@ -115,7 +116,7 @@ $('.sliderSectionPPL').slick({
 
   let target = $('.whySignUp__circle');
   let targetPos = target.offset().top;
-  
+
   let winHeight = $(window).height();
   
   let scrollToElem = targetPos - winHeight;
