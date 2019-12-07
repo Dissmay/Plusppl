@@ -94,7 +94,7 @@ $('.sliderSectionPPL').slick({
     let value = +circleNumber.innerText;
     setInterval(() => {
       if (value < 15800) {
-        value = +value + 50;
+        value = +value + 25;
         circleNumber.innerText = value;
       }
     }, 0.1);
