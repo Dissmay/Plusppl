@@ -93,11 +93,11 @@ $('.sliderSectionPPL').slick({
   function setCounter() {
     let value = +circleNumber.innerText;
     setInterval(() => {
-      if (value < 15824) {
-        value = +value + 8;
+      if (value <= 15824) {
+        value = +value + 10;
         circleNumber.innerText = value;
       }
-    }, 0.1);
+    }, 0);
   }
 
   // ПРОВЕРКА, КОГДА КРУГ БУДЕТ В ПОЛЕ ЗРЕНИЯ, ТОГДА ПОЙДЕТ ОТСЧЕТ ОТ 0 ДО 15800
