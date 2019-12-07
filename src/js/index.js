@@ -100,18 +100,32 @@ $('.sliderSectionPPL').slick({
   }
 
   // ПРОВЕРКА, КОГДА КРУГ БУДЕТ В ПОЛЕ ЗРЕНИЯ, ТОГДА ПОЙДЕТ ОТСЧЕТ ОТ 0 ДО 15800
-  let options = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 1.0
-  };
-  let callback = function(entries, observer) {
-    if (entries[0].isIntersecting) {
-      setCounter();
+  // let options = {
+  //   root: null,
+  //   rootMargin: "0px",
+  //   threshold: 1.0
+  // };
+  // let callback = function(entries, observer) {
+  //   if (entries[0].isIntersecting) {
+  //     setCounter();
+  //   }
+  // };
+  // let observer = new IntersectionObserver(callback, options);
+  // observer.observe(circleNumber);
+
+  let target = $('.whySignUp__circle');
+  let targetPos = target.offset().top;
+  
+  let winHeight = $(window).height();
+  
+  let scrollToElem = targetPos - winHeight;
+  $(window).scroll(function(){
+    let winScrollTop = $(this).scrollTop();
+    if(winScrollTop > scrollToElem){
+      //сработает когда пользователь доскроллит к элементу с классом .elem
+      setCounter()
     }
-  };
-  let observer = new IntersectionObserver(callback, options);
-  observer.observe(circleNumber);
+  });
 
   //СКРОЛЛ ВНИЗ В ФУТЕР
 
@@ -183,13 +197,11 @@ $('.sliderSectionPPL').slick({
   let buffer = $('.navigation__copyBtn');
 
 
-var url = document.location.href;
-new Clipboard('.navigation__copyBtn', {text: function(){ return url;}});
-
-
-
-
-
-
+  var url = document.location.href;
+  new Clipboard('.navigation__copyBtn', {text: function(){ return url;}});
+  buffer.on('click', function(){
+    
+  });
 });
 
+  
