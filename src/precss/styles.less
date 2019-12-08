@@ -1479,11 +1479,30 @@ svg {
     padding-left: 150px;
     padding-bottom: 65px;
     width: 915px;
+    max-width:90%;
     padding-right: 150px;
-    display: none;
+    display:none;
     &.active {
       display: block;
     }
+    .media(800px, {
+      width: 80%;
+        padding:0;
+         padding-top:40px;
+         padding-left:30px;
+         padding-right: 30px;
+         padding-bottom: 40px;
+
+      });
+     .media(550px, {
+      width: 288px;
+      max-width:288px;
+      padding-top: 50px;
+      max-height:500px;
+      padding-top: 20px;
+
+
+      });
   }
 
   &__numberFollowers {
@@ -1495,25 +1514,61 @@ svg {
     padding-bottom: 65px;
     width: 915px;
     padding-right: 150px;
-    display: none;
+    display:none;
     &.active {
       display: block;
     }
+     .media(800px, {
+      width: 80%;
+        padding:0;
+         padding-top:40px;
+         padding-left:30px;
+         padding-right: 30px;
+         padding-bottom: 40px;
+
+      });
+     .media(550px, {
+      width: 288px;
+      max-width:288px;
+      padding-top: 50px;
+      max-height:500px;
+      padding-top: 20px;
+
+
+      });
 
     &_h {
       font-size: 36px;
       color: @rose;
       text-align: center;
       width: 430px;
+      max-width:90%;
       margin: 0 auto;
       line-height: 30px;
       margin-bottom: 30px;
-    }
+      .media(800px, {
+          font-size:28px;
+
+      });
+      .media(550px, {
+        font-size:19px;
+        margin-bottom: 10px;
+        width: 300px;
+        max-width:100%;
+        line-height:20px;
+        margin-top: 20px;
+
+      });
+          }
     &_p {
       font-size: 18px;
       text-align: center;
       color: #828282;
       margin-bottom: 22px;
+       .media(550px, {
+        margin-bottom: 10px;
+      });
+
     }
     &_textForm {
       color: #333333;
@@ -1521,14 +1576,30 @@ svg {
       font-weight: bold;
       text-align: center;
       margin-bottom: 30px;
+      .media(550px, {
+       font-size:14px;
+       margin-bottom: 10px;
+      });
     }
     &_ul {
       list-style-type: none;
       margin-bottom: 50px;
+      .media(550px, {
+        margin-bottom: 10px;
+      });
     }
     &_li {
       .col();
       .size(3);
+      .media(550px, {
+        .size(6);
+        margin: 0;
+        margin-left: 10px;
+        width:auto;
+        height: 37px;
+        padding: 5px;
+        margin-bottom: 10px;
+      });
     }
   }
 
@@ -1541,16 +1612,39 @@ svg {
       padding-bottom: 65px;
       width: 915px;
       padding-right: 150px;
-
+      display:none;      
       &.active {
         display: block;
       }
+       .media(800px, {
+      width: 80%;
+        padding:0;
+         padding-top:40px;
+         padding-left:30px;
+         padding-right: 30px;
+         padding-bottom: 40px;
+
+      });
+     .media(550px, {
+      width: 288px;
+      max-width:288px;
+      padding-top: 50px;
+      max-height:500px;
+      padding-top: 20px;
+
+
+      });
 
       &_h {
         font-size: 36px;
         margin-bottom: 40px;
         color: @rose;
         text-align: center;
+         .media(550px, {
+          font-size:18px;
+          margin-bottom: 20px;
+
+      });
       }
       &_h3 {
         font-size: 36px;
@@ -1558,11 +1652,23 @@ svg {
         text-align: center;
         line-height: 30px;
         margin-bottom: 20px;
+        .media(550px, {
+          font-size:18px;
+          line-height:20px;
+          margin-bottom: 10px;
+
+      });
       }
       &_p {
         font-size: 24px;
         text-align: center;
         margin-bottom: 50px;
+        .media(550px, {
+          font-size:14px;
+          line-height:20px;
+          margin-bottom: 25px;
+
+      });
       }
       &_a {
         text-align: center;
@@ -1577,6 +1683,14 @@ svg {
         color: #fff;
         font-size: 18px;
         text-transform: uppercase;
+         .media(550px, {
+          width: 227px;
+          height: 40px;
+          line-height: 40px;
+          font-size:14px;
+
+      });
+
       }
 }
 
@@ -1586,6 +1700,15 @@ svg {
     color: @rose;
     text-align: center;
     margin-bottom: 23px;
+     .media(800px, {
+          font-size:28px;
+      });
+      .media(550px, {
+        font-size:24px;
+        margin-bottom: 10px;
+
+      });
+
   }
   &__p {
     font-size: 24px;
@@ -1594,6 +1717,14 @@ svg {
     max-width: 400px;
     margin: 0 auto;
     margin-bottom: 17px;
+    .media(800px, {
+          font-size:21px;
+          font-weight:bold;
+      });
+     .media(550px, {
+        font-size:14px;
+       margin-bottom: 5px;
+      });
   }
   &__textGray {
     font-size: 18px;
@@ -1602,6 +1733,14 @@ svg {
     margin-bottom: 40px;
     text-align: center;
     max-width: 372px;
+    .media(800px, {
+          font-size:18px;
+          
+      });
+    .media(550px, {
+      font-size:12px;
+ margin-bottom: 10px;
+      });
   }
   &__form {
     width: 100%;
@@ -1612,21 +1751,55 @@ svg {
       margin-bottom: 32px;
       font-weight: bold;
       text-align: center;
+       .media(550px, {
+      font-size:14px;
+      margin-bottom: 5px;
+
+      });
     }
     &_ul {
       list-style-type: none;
       margin-bottom: 26px;
+       .media(800px, {
+      margin: 0 auto;
+      justify-content:center;
+      });
+       .media(550px, {
+          justify-content:space-between;
+          width: 100%;
+
+      });
     }
     &_li {
       .col();
       .size(4);
       margin-bottom: 14px;
+       .media(800px, {
+        .size(4);
+      });
+        .media(550px, {
+           margin-bottom: 5px;
+            &:nth-of-type(7n){
+                display:none;
+            }
+            &:nth-of-type(8n){
+                display:none;
+            }
+             &:nth-of-type(9n){
+                display:none;
+            }
+            margin-left:auto;
+            margin-right: auto;
+            width: 110px;
+            height: 40px;
+
+      });
     }
     &_button {
       border-radius: 10px;
       background-color: #c4c4c4;
       height: 64px;
-      width: 191px;
+      max-width: 191px;
       border: none;
       cursor: pointer;
       outline: none;
@@ -1636,6 +1809,11 @@ svg {
       justify-content: space-between;
       text-align: center;
       width: 100%;
+      .media(550px, {
+          display:block;
+
+      });
+
     }
     &_buttonMoreShops {
       width: 292px;
@@ -1647,6 +1825,16 @@ svg {
       font-size: 18px;
       cursor: pointer;
       text-transform: uppercase;
+      .media(800px, {
+        width: 227px;
+        height: 49px;
+        margin: 0 auto;
+        
+      });
+      .media(550px, {
+         margin-bottom: 10px;
+
+      });
     }
     &_buttonSelect {
       width: 292px;
@@ -1658,6 +1846,12 @@ svg {
       font-size: 18px;
       text-transform: uppercase;
       cursor: pointer;
+      .media(800px, {
+        width: 227px;
+        height: 49px;
+        margin: 0 auto;
+
+      });
     }
   }
 }
@@ -1674,14 +1868,18 @@ svg {
   cursor: pointer;
   margin: 0 auto;
   display: block;
+  .media(550px, {
+    width: 227px;
+    height: 40px;
+    margin-top: 20px;
+    font-size:14px;
+      });
 }
 .checkbox {
   display: none;
 }
 .checkbox + label {
   display: block;
-  width: 30px;
-  height: 30px;
   background: #ccc;
   border: 1px solid #555;
   text-align: center;
@@ -1689,6 +1887,14 @@ svg {
   background-color: #c4c4c4;
   height: 64px;
   width: 191px;
+  .media(800px, {
+      width: 110px;
+      height: 40px;
+      margin: 0 auto;
+      });
+  .media(550px, {
+      width: 100%;
+      });
   border: none;
   cursor: pointer;
   outline: none;
@@ -1721,6 +1927,16 @@ svg {
   border: none;
   cursor: pointer;
   outline: none;
+   .media(800px, {
+      width: 110px;
+      height: 40px;
+      margin: 0 auto;
+      });
+  .media(550px, {
+      width: 100%;
+      font-size:12px;
+      line-height:40px;
+      });
 }
 .checkboxFollowers + label:before {
   content: "";
