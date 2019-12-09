@@ -10,11 +10,21 @@
 }
 
 body {
-  font-family: "Rubik", "Pacifico", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 21px;
   color: #000;
+}
+@font-face{
+  font-family: "Rubik-plus";
+  src:url('../fonts/RubikPlus-Regular.otf');
+  font-style: normal;
+  font-weight:400;
+}
+@font-face{
+  font-family: "Rubik-Bold";
+  src:url('../fonts/RubikPlus-Bold.otf');
+  font-weight: bold;
 }
 
 /* Global classes */
@@ -72,14 +82,16 @@ svg {
       width: 266px;
       height: 60px;
       font-size:14px;
+      margin-bottom: 12px;
       });
-     .media(400px,{
+    &__join{
+      .media(550px,{
       width: 212px;
       height: 47px;
       font-size:12px;
-      margin-bottom: 10px;
-
       });
+    }
+ 
 }
 .btnInsta {
   text-transform:uppercase;
@@ -87,11 +99,14 @@ svg {
   height: 74px;
    cursor:pointer;
   border: none;
-  .media(400px,{
+    &__join{
+      .media(550px,{
       width: 212px;
       height: 47px;
       font-size:12px;
       });
+    }
+  
     .media(594px,{
       width: 266px;
       height: 60px;
@@ -113,6 +128,49 @@ svg {
   font-size: 24px;
   display: block;
   margin: 0 auto;
+}
+
+.joinInput{
+   margin: 0 auto;
+       display:block;
+      width: 90%;
+     
+      height: 62px;
+      border: 1px solid #bdbdbd;
+      border-radius: 5px;
+      padding-left: 25px;
+      padding-bottom: 1px;
+      margin-top: 19px;
+      margin-bottom: 38px;
+      font-size: 18px;
+      color:#BDBDBD;
+
+
+      .media(700px,{
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-size: 14px;
+      });
+
+       .media(800px,{
+         margin-left:auto;
+         margin-right:auto;
+        width: 100%;
+
+        });
+       .media(550px,{
+        width: 211px;
+        height: 36px;
+        margin-top: 0;
+
+     
+
+      });
+       .media(594px,{
+      height: 47px;
+
+      });
+
 }
 .sectionForm {
   display: flex;
@@ -155,7 +213,7 @@ svg {
       width: 266px;
 
       });
-   .media(320px,{
+   .media(319px,{
       width: 211px;
 
 
@@ -174,6 +232,7 @@ svg {
       margin-bottom: 38px;
       font-size: 18px;
       color:#BDBDBD;
+      
 
       .media(700px,{
       margin-top: 10px;
@@ -188,7 +247,7 @@ svg {
 
         });
        .media(320px,{
-         height: 36px;
+         height: 45px;
      
 
       });
@@ -202,7 +261,21 @@ svg {
     }
   }
 }
+.joinFormMobail{
 
+}
+.joinFormMobail label {
+    font-size: 18px;
+    color: #161616;
+    padding-left: 90px;
+
+    .media(800px,{
+      padding-left: 65px;
+      });
+    .media(400px,{
+     font-size:12px;
+      });
+  }
 /* Atomic classes */
 
 .d-n {
@@ -330,6 +403,7 @@ svg {
   opacity: 1;
 }
   &__joinNow_btn {
+    font-family:Lato;
     width: 155px;
     height: 50px;
     text-transform: uppercase;
@@ -446,6 +520,11 @@ svg {
       {display: block; opacity: 0.1; background-position: bottom; top: 50px; right:
         0px; z-index: -1; width: 490px;}
     );
+    .media(320px,{
+        top: -20px;
+        right: -30px;
+      }
+    );
   }
   &__scrollDown {
     width: 200px;
@@ -510,7 +589,10 @@ svg {
   &__h {
     font-size: 96px;
     margin-bottom: 59px;
+    font-family:Rubik-bold;
+    color:#333333;
     .media(800px, {font-size: 50px; text-align: center; margin-bottom: 20px;});
+   
   }
   &__p {
     font-family: Pacifico;
@@ -519,14 +601,20 @@ svg {
     color: #333333;
     margin-bottom: 49px;
     .media(800px, {font-size: 24px; text-align: center;});
+     .media(320px, {
+     margin-bottom: 80px;
+        });
 
     &_medium {
       font-size: 48px;
-      font-family: Rubik;
+      font-family: Rubik-bold;
       font-weight: bold;
       color: #333333;
-      margin-bottom: 35px;
+      margin-bottom: 35px; 
       .media(800px, {font-size: 30px; text-align: center;});
+      .media(550px, {font-size: 30px; text-align: center;
+        line-height:30px;
+        });
     }
     &_end {
       font-size: 36px;
@@ -545,6 +633,7 @@ svg {
   padding-bottom: 160px;
 
   .media(800px, {padding-bottom: 60px; display: block;});
+
   &__flex {
   }
   &__h {
@@ -554,6 +643,7 @@ svg {
     margin-bottom: 50px;
     text-align: center;
     .media(800px, {font-size: 24px; text-align: center;});
+    .media(320px, {margin-bottom: 20px;});
   }
   &__logotype {
     margin: 0 auto;
@@ -605,6 +695,28 @@ svg {
   position: relative;
   display:none;
   .media(800px, {display:block;});
+ .media(550px,{
+ &:before{
+    content:'';
+    position:absolute;
+    height: 100%;
+    width: 20px;
+    background-color:white;
+    opacity:0.7;
+    z-index:1; 
+  }
+   &:after{
+    content:'';
+    position:absolute;
+    right:0;
+    top: 0;
+    height: 100%;
+    width: 20px;
+    background-color:white;
+    opacity:0.7;
+    z-index:1; 
+  }
+  });
 }
 .sliderSectionPPL__btn_prev{
     position:absolute;
@@ -652,13 +764,15 @@ svg {
 .sectionHelp {
   padding-bottom: 85px;
   &__h {
+    font-family:Rubik-bold;
     font-size: 64px;
     color: #161616;
     font-weight: bold;
     margin-bottom: 60px;
     text-align: center;
     .media(800px, {font-size: 48px;});
-    .media(480px, {font-size: 24px;});
+    .media(480px, {font-size: 24px;
+      margin-bottom: 12px;});
   }
   &__p {
     color: @rose;
@@ -669,6 +783,7 @@ svg {
     margin-bottom: 150px;
     .media(800px, {margin-bottom: 30px;});
     .media(480px, {font-size: 18px;});
+    .media(480px, {margin-bottom: 10px;});
   }
   &__ul {
     list-style-type: none;
@@ -690,22 +805,24 @@ svg {
       text-align: center;
     }
     &_h {
+      font-family:Rubik-bold;
       text-align: center;
       width: 350px;
       font-size: 24px;
-      font-weight: bold;
       color: #000000;
       margin-bottom: 20px;
       .media(370px, {width: 300px;});
       .media(480px, {font-size: 20px;});
     }
     &_p {
+      font-family:Rubik-plus;
       text-align: center;
       width: 350px;
       font-size: 24px;
       color: #828282;
       .media(370px, {width: 300px;});
       .media(480px, {font-size: 12px; width: 200px;});
+      .media(320px, { width: 200px;});
     }
   }
 }
@@ -738,6 +855,9 @@ svg {
   background-image: url(../img/BackgroundGrey.jpg);
   padding-bottom: 170px;
   position: relative;
+  .media(550px, {
+        padding-bottom: 90px;
+        });
   .media(
     800px,
     {background-image: url(../img/BackgroundGrayMobile.jpg) ; background-size: contain;}
@@ -756,6 +876,12 @@ svg {
       800px,
       {background-image: url(../img/svg/GrayScreenLeftMobail.png) ; max-width: 90%;}
     );
+    .media(
+      550px,
+      {height: 237px;
+        width: 347px;
+        top: 130px;}
+    );
   }
   &:after {
     content: "";
@@ -772,10 +898,18 @@ svg {
       {width: 300px; top: 400px; background-image: url(../img/svg/GrayScreenRightMobile.svg)
         ;}
     );
+     .media(
+      550px,
+      {height: 361px;
+        width: 103px;
+        bottom:0px;
+        right:0px;}
+    );
   }
   &__boxes {
   }
   &__h {
+    font-family:Rubik-plus;
     padding-top: 120px;
     text-align: center;
     max-width: 90%;
@@ -787,6 +921,8 @@ svg {
     line-height: 30px;
     margin-bottom: 110px;
     .media(800px, {font-size: 24px; margin-bottom: 50px; min-width: auto;});
+    .media(550px, {font-family:Rubik-bold; font-weight:900; 
+     });
   }
   &__ul {
     list-style-type: none;
@@ -800,8 +936,17 @@ svg {
     flex-direction: column;
     align-items: center;
     .media(800px, {.size(12) ;});
+    .media(550px, {
+        margin-bottom: 45px;
+     });
     &_img {
       margin-bottom: 20px;
+      .media(550px, {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 0px;
+     });
+
     }
     &_p {
       max-width: 300px;
@@ -810,7 +955,10 @@ svg {
       text-align: center;
       line-height: 30px;
       color: #333333;
-      .media(550px, {font-size: 14px});
+      .media(550px, {
+        font-size: 14px;
+        width: 266px;
+        });
     }
   }
   &__circle {
@@ -822,6 +970,11 @@ svg {
     border-radius: 50%;
     background-color: @rose;
     margin: 0 auto;
+    .media(550px,{
+     width: 89px;
+     height: 89px;
+
+      });
 
     &_p {
       text-align: center;
@@ -829,11 +982,22 @@ svg {
       color: #ffffff;
       font-size: 18px;
       box-shadow: 10px rgba(0, 0, 0, 0.3);
+      .media(550px,{
+         line-height:50px;
+         font-size:10px;
+
+      });
     }
     &_pi {
       margin-top: -20px;
       color: #ffffff;
       font-size: 36px;
+      .media(550px,{
+        font-size: 24px;
+        margin-top: -10px;
+        font-weight:800;
+
+      });
     }
   }
 }
@@ -947,7 +1111,7 @@ svg {
       text-align: center;
       font-size: 24px;
       color: #ffffff;
-      font-family: Rubik;
+      font-family: Rubik-plus;
       width: 320px;
       line-height: 25px;
       .media(800px,{
@@ -968,8 +1132,13 @@ svg {
 
 .sectionFormTwo {
   padding-top: 92px;
+ 
+  .media(500px,{
+      padding-top: 40px;
+      });
   &__h {
     position:relative;
+    font-family:Rubik-bold;
      .media(500px,{
       font-size:24px;
         &:after{
@@ -1384,6 +1553,7 @@ svg {
     width: 100%;
     height: 100vh;
     background: rgba(0, 0, 0, 0.35);
+    z-index:9999999;
   }
 
   &__containerBox {
@@ -1393,7 +1563,8 @@ svg {
     align-items: center;
   }
   &__join {
-    position: relative;
+    position:relative;
+    
     padding-top: 80px;
     padding-left: 150px;
     padding-right: 150px;

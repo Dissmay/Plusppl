@@ -7,7 +7,7 @@ $(function() {
 
 $('.sliderSectionPPL').slick({
   centerMode: true,
-  centerPadding: '1x',
+  centerPadding: '60px',
   slidesToShow: 1,
   autoplay: true,
   prevArrow: $('.sliderSectionPPL__btn_prev'),
@@ -123,7 +123,7 @@ $('.sliderSectionPPL').slick({
   $(window).scroll(function(){
     let winScrollTop = $(this).scrollTop();
     if(winScrollTop > scrollToElem){
-      //сработает когда пользователь доскроллит к элементу с классом .elem
+      //сработает когда пользователь доскроллит к элементу с классом .whySignUp__circle
       setCounter()
     }
   });
@@ -148,7 +148,7 @@ $('.sliderSectionPPL').slick({
       1000
     );
   });
-
+//мобильный скролл
   footerScrollMobail.on("click", function(event) {
     event.preventDefault();
     let target = $(event.target);
@@ -179,7 +179,7 @@ $('.sliderSectionPPL').slick({
     );
   });
 
-
+//мобильный скролл
   topScrollMobail.on("click", function(event) {
     event.preventDefault();
     let target = $(event.target);
