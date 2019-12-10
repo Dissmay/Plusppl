@@ -232,7 +232,7 @@ $(window).on("scroll", function(event) {
     if (flag1) {
       flag1 = false;
 
-      logoImg.setAttribute("src", "../img/svg/logoFixedMobail.svg");
+      logoImg.setAttribute("src", "./img/svg/logoFixedMobail.svg");
       logoImg.style.width = "144px";
       logoImg.style.height = "30px";
       logoImg.style.marginLeft = "10px";
