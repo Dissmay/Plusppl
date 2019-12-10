@@ -176,6 +176,8 @@ svg {
       });
 
 }
+
+
 .sectionForm {
   display: flex;
   justify-content: center;
@@ -197,18 +199,19 @@ svg {
       });
   }
   &__h {
-    font-family:Lato;
+    font-family:Rubik bold;
     text-align: center;
     color: @rose;
- 
+  
     font-size: 36px;
     margin-bottom: 40px;
     .media(550px,{
      width: 300px;
       });
     .media(550px,{
-     color:black
+     color: @rose;
       });
+
 
   }
   &__form {
@@ -223,6 +226,11 @@ svg {
 
 
       });
+   &_inputLast{
+    .media(550px,{
+      margin-bottom: 25px;
+      });
+   }
     &_input {
        margin: 0 auto;
        display:block;
@@ -251,6 +259,7 @@ svg {
         width: 100%;
 
         });
+      
        .media(320px,{
          height: 45px;
      
@@ -263,8 +272,16 @@ svg {
       
     }
     &_button {
+    .media(550px,{
+        margin-bottom: 23px  !important;
+      });
     }
   }
+}
+.sectionForm__h_rose{
+  .media(550px,{
+    color:black
+    })
 }
 .joinFormMobail{
 
@@ -292,6 +309,7 @@ svg {
 }
 
 /* General */
+
 .mobailNavigation {
   display: none;
   .media(800px, {display: block;});
@@ -299,16 +317,49 @@ svg {
 .pcNavigation {
   .media(800px, {display: none;});
 }
-.navigation {
-  display: flex;
+.navigationPC{
+  display:flex;
+  justify-content: space-between
+}
+.navigationPC{
+  display:flex;
   justify-content: space-between;
-  margin-top: 56px;
+  margin-top: 55px;
+ 
+}
+.navFlex{
+     display: flex;
+    justify-content: space-between;
+    align-items:flex-end;
+    margin-top: 5px;
+    position:relative;
+  
+  }
+.navigation {
+  &.scrolled{
+    background-color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: fixed;
+    z-index:9999; 
+    top: 0px;
+    left: 0;
+    width: 100%;
+  }
+  
+ 
+
+  &.logoMobailNavigationFixed{
+
+  }
+
   .media(500px, {
    align-items:center;
     });
 
   &__ul {
     list-style-type: none;
+
   }
   &__li {
     margin-bottom: 30px;
@@ -574,6 +625,9 @@ svg {
     background-repeat: no-repeat;
     display: none;
     .media(800px, {display: block;});
+    .media(800px, {
+      margin-bottom: 70px;
+      });
   }
 }
 
@@ -581,6 +635,10 @@ svg {
   .media(800px, {padding-top: 40px;});
   text-align: center;
   padding-bottom: 117px;
+   .media(800px, {
+    padding-bottom: 50px;
+
+    });
   &__center {
     display: flex;
     justify-content: center;
@@ -626,9 +684,18 @@ svg {
     &_end {
       font-size: 36px;
       color: #828282;
+      width: 791px;
       max-width: 870px;
       line-height: 40px;
+        font-family: Rubik plus;
       .media(800px, {font-size: 24px; text-align: center;});
+      .media(550px, {
+        font-size:12px;
+        line-height: 20px;
+        width: 240px;
+        margin: 0 auto;
+
+        });
     }
   }
 }
@@ -668,9 +735,11 @@ svg {
     margin-bottom: 55px;
   }
   &__ul {
+    font-family:Rubik plus;
     list-style-type: none;
     margin: 0 auto;
     justify-content: space-between;
+    align-items:center;
     width: 100%;
     .media(800px, {width: 100%; height: 100%; display: none;});
   }
@@ -678,10 +747,13 @@ svg {
     .col();
     .size(2);
    
-
+      width: 270px; 
+      margin-left: 90px;
+      margin-right: 90px;
     .media(800px, {.size(4) ;});
 
     &_p {
+     
       font-size: 26px;
       color: #333333;
       line-height: 30px;
@@ -787,7 +859,8 @@ svg {
     line-height: 16px;
     font-family: Pacifico;
     text-align: center;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
+
     .media(800px, {margin-bottom: 30px;});
     .media(480px, {font-size: 18px;});
     .media(480px, {margin-bottom: 10px;});
@@ -964,7 +1037,8 @@ svg {
       color: #333333;
       .media(550px, {
         font-size: 14px;
-        width: 266px;
+        width: 210px;
+        line-height:20px;
         });
     }
   }
@@ -996,6 +1070,8 @@ svg {
       });
     }
     &_pi {
+      font-family:Rubik;
+      font-weight:bold;
       margin-top: -20px;
       color: #ffffff;
       font-size: 36px;
@@ -1070,6 +1146,7 @@ svg {
       });
   }
   &__h {
+    font-family:Rubik bold;
     padding-top: 150px;
     font-size: 36px;
     font-weight: 600;
@@ -1085,9 +1162,11 @@ svg {
         width: 300px;
       });
      .media(500px,{
-     font-size:24px; 
-    padding-top: 80px;
-    margin-bottom: 50px;
+       font-size:24px; 
+      padding-top: 80px;
+      margin-bottom: 50px;
+      width: 245px;
+      line-height:30px;
       });
   }
   &__ul {
@@ -1111,7 +1190,7 @@ svg {
        width: 300px;
       });
      .media(500px,{
-    margin-bottom: 60px;
+    margin-bottom: 50px;
       });
 
     &_p {
@@ -1120,6 +1199,7 @@ svg {
       color: #ffffff;
       font-family: Rubik plus;
       width: 320px;
+      font-weight: 200;
       line-height: 25px;
       .media(800px,{
      
@@ -1129,7 +1209,8 @@ svg {
       .media(550px,{
      
       font-size:18px;
-      width: 280px;
+      width: 220px;
+
        
       });
 
@@ -1142,12 +1223,14 @@ svg {
  
   .media(500px,{
       padding-top: 40px;
+      padding-bottom: 55px;
       });
   &__h {
     position:relative;
     font-family:Rubik bold;
      .media(500px,{
       font-size:24px;
+
         &:after{
           content:'';
           display:inline-block;
@@ -1186,7 +1269,19 @@ svg {
       color:white;
        
       });
+&__instaIcon{
+   &:after{
+        content:'';
+        display:inline-block;
+        background-image:url(../img/svg/instagrammIcon.svg);
+        width: 19px;
+        height:19px;
+        margin-bottom: -5px;
+        margin-left: 10px;
+        
+      }
 
+}
 
   &__footerBox {
     display: flex;
@@ -1232,6 +1327,10 @@ svg {
     &_p {
       margin-bottom: 28px;
       display:block;
+      text-decoration:none;
+      color:#fff;
+      font-family:Rubik plus;
+     
       .media(600px,{
        margin-bottom: 20px;
       });
@@ -1244,6 +1343,7 @@ svg {
        margin-bottom: 35px;
        color:#fff;
        text-decoration:none;
+       font-family:Rubik plus;
       });
 
     }
@@ -1279,6 +1379,7 @@ svg {
   	line-height:40px;
   	text-align: center;
   	font-size:14px;
+
   	color:#FCFCFC;
     .media(710px,{
        display:none;
@@ -1289,7 +1390,8 @@ svg {
 .footer__footerBoxMobile{
   display:none;
   .media(710px,{
-     
+     font-family:Rubik plus;
+     font-size:14px;
       display:block  
        
       });
@@ -1301,7 +1403,8 @@ svg {
    
     
     .media(710px,{
-   
+    font-family:Rubik plus;
+     font-size:14px;
       display:block;
 
       });
@@ -1334,11 +1437,12 @@ svg {
 .footer__AllRight2019{
   margin-bottom: 15px;
 }
+
 .navigation__menu {
 	display:none;
   padding-top: 60px;
   position: fixed;
-  z-index: 10;
+  z-index: 100000;
   top: 0;
   left: 0;
   max-width: 608px;
@@ -1346,6 +1450,27 @@ svg {
   height: 100vh;
   background-color: @rose;
   padding-left: 100px;
+  &_obertka{
+    
+
+  }
+  &_backGround{
+    display:none;
+    top: 0;
+    left: 608px;
+   
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.35);
+
+    &.activeBack{
+       opacity: 0;
+      display:block;
+      transition: opacity 1s;     
+    }
+    
+  }
   .media(1200px,{
     width: 100%;
     max-width:100%;
@@ -1363,10 +1488,10 @@ svg {
     position: relative;
     outline: none;
     cursor: pointer;
-     .media(500px,{
-    width: 13px;
-    height: 13px;
-    margin-left: 9px;
+     .media(550px,{
+    width: 26px;
+    height: 27px;
+    margin-left: 15px;
     });
     &:before,
     &:after {
@@ -1550,6 +1675,14 @@ svg {
     transform: translateX( -100% );
   }
 }
+@keyframes opacityBackground{
+  from{
+   opacity:0;
+  }
+  to{
+    opacity:0.5;
+  }
+}
 .modalContainer {
   display: none;
   &.active {
@@ -1578,7 +1711,7 @@ svg {
     background-color: #fff;
     border-radius: 15px;
     max-width:90%;
-    max-height: 90vh;
+    max-height: 100vh;
 
     .media(800px,{
        padding-top:20px;

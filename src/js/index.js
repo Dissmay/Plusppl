@@ -35,9 +35,11 @@ $('.sliderSectionPPL').slick({
   );
   let formContainer = document.querySelector(".modalContainer__containerBox");
   let menuJoinBtn = document.querySelector(".navigation__menu_button");
+  let backGroundOpacity = document.querySelector('.navigation__menu_backGround');
 
   modalContainerBtnJoin.addEventListener("click", function() {
     modalContainerRegister.classList.add("active");
+
   });
 
   navigationbtnMobail.addEventListener("click", function() {
@@ -59,11 +61,17 @@ $('.sliderSectionPPL').slick({
   menuOpenBtn.addEventListener("click", function(e) {
     if (flag == false) {
       menu.classList.add("active");
+       backGroundOpacity.classList.add('activeBack');
+      backGroundOpacity.style.opacity= '1';
+        
+   
+
     }
   });
   menuOpenBtnMobail.addEventListener("click", function() {
     if (flag == false) {
       menu.classList.add("active");
+
     }
   });
 
@@ -77,6 +85,7 @@ $('.sliderSectionPPL').slick({
     if (flag) {
       menu.classList.remove("not-active");
       menu.classList.remove("active");
+      backGroundOpacity.classList.remove('activeBack');
       flag = false;
     } else {
       flag = true;
@@ -143,7 +152,7 @@ $('.sliderSectionPPL').slick({
     let elemToScroll = $(href);
     $("html, body").animate(
       {
-        scrollTop: elemToScroll.offset().top
+        scrollTop: elemToScroll.offset().top-190
       },
       1000
     );
@@ -200,6 +209,66 @@ $('.sliderSectionPPL').slick({
 
   var url = document.location.href;
   new Clipboard('.navigation__copyBtn', {text: function(){ return url;}});
+
+
+
+  /* Fix head */
+let flag1 = true;
+$(window).on("scroll", function(event) {
+  let target = $(event.target);
+  let scrolledPixels = target.scrollTop();
+  let header = $(".navigation");
+
+  let navigation = $(".navFlex");
+  let lol;
+  var logoImg = document.createElement("img");
+  if (scrolledPixels) {
+    lol = document.querySelector(".lol");
+  }
+
+  if (scrolledPixels > 580) {
+    header.addClass("scrolled");
+    header.addClass("wrapper");
+    if (flag1) {
+      flag1 = false;
+
+      logoImg.setAttribute("src", "../img/svg/logoFixedMobail.svg");
+      logoImg.style.width = "144px";
+      logoImg.style.height = "30px";
+      logoImg.style.marginLeft = "10px";
+      logoImg.classList.add("lol");
+      header["0"].insertAdjacentElement("afterbegin", logoImg);
+    }
+  } else {
+    header.removeClass("scrolled");
+    header.removeClass("wrapper");
+  }
+
+  if (scrolledPixels > 580) {
+    if (lol) {
+      lol.style.display = "block";
+    }
+  }
+  if (scrolledPixels < 580) {
+    if (lol) {
+      lol.style.display = "none";
+    }
+  }
+});
+/* Fix head PC */
+
+  $(window).on('scroll', function(event){
+    var target = $(event.target);
+    var scrolledPixels = target.scrollTop();
+    var header = $('.navigationPC');
+    if(scrolledPixels > 60){
+      header.addClass('scrolledPC');
+       header.addClass("wrapper");
+    } else{
+      header.removeClass('scrolledPC');
+    }
+  });
+
 
 });
 

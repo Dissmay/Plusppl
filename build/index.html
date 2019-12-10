@@ -20,7 +20,7 @@
   <body>
     <header id="ScrollTop" class="wrapper">
       <div class="pcNavigation">
-        <nav class="navigation">
+        <nav class="navigationPC">
           <ul class="navigation__ul">
             <li class="navigation__li">
               <div class="navigation__logotype">
@@ -51,30 +51,32 @@
             <p class="firstScreenBlock__p_end"> Give your followers the ability to discover and shop the clothes you wear! </p>
           </div>
         </div>
-        <a href="#footer" class="firstSection__scrollDown wrapper"> Scroll down </a>
-        <a href="#footer" class="firstSection__scrollDownMobail wrapper"> </a>
+        <a href="#Scroll" class="firstSection__scrollDown wrapper"> Scroll down </a>
+        <a href="#Scroll" class="firstSection__scrollDownMobail wrapper"> </a>
         <!-- МОБИЛЬНАЯ НАВИГАЦИЯ -->
         <div class="mobailNavigation wrapper">
           <nav class="navigation">
-            <ul class="navigation__ulMobail">
-              <li>
-                <div class="navigation__menuBtnMobail">
-                  <span class="navigation__menuBtnMobail_bottomMobail"></span>
-                </div>
-              </li>
-              <li>
-                <div class="tooltip">
-                  <div class="navigation__copyBtn">
-                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+            <div class="navFlex">
+              <ul class="navigation__ulMobail">
+                <li>
+                  <div class="navigation__menuBtnMobail">
+                    <span class="navigation__menuBtnMobail_bottomMobail"></span>
                   </div>
-                </div>
-              </li>
-            </ul>
-            <button class=" navigation__joinNow_btnMobail"> join now </button>
+                </li>
+                <li>
+                  <div class="tooltip">
+                    <div class="navigation__copyBtn">
+                      <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <button class=" navigation__joinNow_btnMobail"> join now </button>
+            </div>
           </nav>
         </div>
       </section>
-      <section class="SectionToPpl wrapper">
+      <section id='Scroll' class="SectionToPpl wrapper">
         <div class="SectionToPpl__flex">
           <h2 class="SectionToPpl__h"> Say Hello </h2>
           <div class="SectionToPpl__logotype">
@@ -196,7 +198,7 @@
       </section>
       <section class="sectionForm sectionFormTwo wrapper">
         <div class="sectionForm__flex sectionFormTwo__flex">
-          <h2 class="sectionForm__h sectionFormTwo__h"> Le'ts Change </h2>
+          <h2 class="sectionForm__h sectionFormTwo__h"> Let's Change </h2>
           <p class="sectionFormTwo__p"> Together we can give a better life of style and fashion to Plus PPL who are a part of our lives, if that sounds like you join us today ... Add a plus to your bank account and pluses to the lives of your followers. </p>
           <form action="#" method="POST" class="sectionForm__form">
             <label> &nbsp;&nbsp;&nbsp;First name <br />
@@ -206,7 +208,7 @@
               <input type="text" class="sectionForm__form_input" placeholder="Last name" />
             </label>
             <label> &nbsp;&nbsp;&nbsp;Email <br />
-              <input type="email" class="sectionForm__form_input" placeholder="Email" />
+              <input type="email" class="sectionForm__form_input sectionForm__form_inputLast" placeholder="Email" />
             </label>
             <button class="sectionForm__form_button btnSignUp">Sign UP</button>
             <button class="sectionForm__form_buttonInsta btnInsta"> Sign UP via Instagram </button>
@@ -244,7 +246,7 @@
             <h3 class="footer__li_h">Contacts</h3>
           </li>
           <li class="footer__li">
-            <p class="footer__li_p">Follow us on</p>
+            <p class="footer__li_p footer__instaIcon">Follow us on</p>
           </li>
           <li class="footer__li">
             <p class="footer__li_p">Email: <br><br>
@@ -256,8 +258,8 @@
         <div class="footer__logotype">
           <img src="./img/svg/logoMobailFooter.svg" alt="LogotypeImg" />
         </div>
-        <a class="footer__li_p">Follow us on</a>
-        <a href="#" class="footer__li_mail">Contact: Info@plusppl.com</a>
+        <a href="#" class="footer__li_p footer__instaIcon">Follow us on</a>
+        <a href="mailto:info@plusppl.com" class="footer__li_mail">Contact: Info@plusppl.com</a>
         <a href="#ScrollTop" class="footer__scrollTopMobile"> Scroll to top </a>
         <p class="footer__AllRight2019"> ©All rights reserved PlusPPL 2019 </p>
       </div>
@@ -272,7 +274,7 @@
           <button class="modalContainer__join_closer"></button>
           <section class="sectionForm wrapper">
             <div class="sectionForm__flex">
-              <h2 class="sectionForm__h"> Join Now </h2>
+              <h2 class="sectionForm__h sectionForm__h_rose"> Join Now </h2>
               <form action="#" method="POST" class="joinFormMobail">
                 <p>
                   <label> &nbsp;&nbsp;First name <br />
@@ -289,7 +291,7 @@
                     <input type="email" class="joinInput" placeholder="Email" />
                   </label>
                 </p>
-                <button class="sectionForm__form_button btnSignUp btnSignUp__join">Sign UP</button>
+                <button class=" btnSignUp btnSignUp__join">Sign UP</button>
                 <button class="sectionForm__form_buttonInsta btnInsta btnInsta__join"> Sign UP via Instagram </button>
               </form>
             </div>
@@ -427,33 +429,37 @@
     </div>
     <!-- СКРЫТОЕ МЕНЮ -->
     <div class="navigation__menu">
-      <div class="menuBoxes__closerAndLogo">
-        <button class="navigation__menu_buttonCloser"></button>
-        <div class="navigation__menu_logotype">
-          <img src="./img/svg/LogoMenu.svg" alt="" class="navigation__menu_logotypeImg" />
-          <img src="./img/svg/LogoMobailMenu.svg" alt="" class="navigation__menu_logotypeImgMobail">
+      <div class="navigation__menu_obertka">
+        <div class="menuBoxes__closerAndLogo">
+          <button class="navigation__menu_buttonCloser"></button>
+          <div class="navigation__menu_logotype">
+            <img src="./img/svg/LogoMenu.svg" alt="" class="navigation__menu_logotypeImg" />
+            <img src="./img/svg/LogoMobailMenu.svg" alt="" class="navigation__menu_logotypeImgMobail">
+          </div>
+        </div>
+        <div class="menuBoxes__photoAndJoin">
+          <div class="navigation__menu_divImg">
+            <img src="./img/faceMenu.png" alt="" class="navigation__menu_img" />
+          </div>
+          <button class="navigation__joinNow_btn navigation__menu_button">JOIN NOW</button>
+        </div>
+        <ul class="navigation__menu_ul">
+          <li class="navigation__menu_li">
+            <a href="#" class="navigation__menu_p">Why it is necessary</a>
+          </li>
+          <li class="navigation__menu_li">
+            <a href="#" class="navigation__menu_p">Solutions and Technology</a>
+          </li>
+          <li class="navigation__menu_li">
+            <a href="#" class="navigation__menu_p">Plus Community</a>
+          </li>
+          <li class="navigation__menu_li">
+            <a href="#" class="navigation__menu_p">Our vision</a>
+          </li>
+        </ul>
+        <div class="navigation__menu_backGround">
         </div>
       </div>
-      <div class="menuBoxes__photoAndJoin">
-        <div class="navigation__menu_divImg">
-          <img src="./img/faceMenu.png" alt="" class="navigation__menu_img" />
-        </div>
-        <button class="navigation__joinNow_btn navigation__menu_button">JOIN NOW</button>
-      </div>
-      <ul class="navigation__menu_ul">
-        <li class="navigation__menu_li">
-          <a href="#" class="navigation__menu_p">Why it is necessary</a>
-        </li>
-        <li class="navigation__menu_li">
-          <a href="#" class="navigation__menu_p">Solutions and Technology</a>
-        </li>
-        <li class="navigation__menu_li">
-          <a href="#" class="navigation__menu_p">Plus Community</a>
-        </li>
-        <li class="navigation__menu_li">
-          <a href="#" class="navigation__menu_p">Our vision</a>
-        </li>
-      </ul>
     </div>
     <script src="./js/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.10/clipboard.min.js"></script>

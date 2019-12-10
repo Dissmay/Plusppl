@@ -21,7 +21,7 @@
 <body>
 <header id="ScrollTop" class="wrapper">
 	<div class="pcNavigation">
-		<nav class="navigation">
+		<nav class="navigationPC">
 	    <ul class="navigation__ul">
 	      <li class="navigation__li">
 	        <div class="navigation__logotype">
@@ -71,14 +71,15 @@
 	        </p>
 	      </div>
 	    </div>
-	    <a href="#footer" class="firstSection__scrollDown wrapper">
+	    <a href="#Scroll" class="firstSection__scrollDown wrapper">
 	      Scroll down
 	    </a>
-	    <a href="#footer" class="firstSection__scrollDownMobail wrapper"> </a>
+	    <a href="#Scroll" class="firstSection__scrollDownMobail wrapper"> </a>
 	    <!-- МОБИЛЬНАЯ НАВИГАЦИЯ -->
 	    <div class="mobailNavigation wrapper">
 	      <nav class="navigation">
-	        <ul class="navigation__ulMobail">
+	      	<div class="navFlex">
+	      		<ul class="navigation__ulMobail">
 	          <li>
 	            <div class="navigation__menuBtnMobail">
 	              <span class="navigation__menuBtnMobail_bottomMobail"></span>
@@ -95,10 +96,12 @@
 	        <button class=" navigation__joinNow_btnMobail">
 	          join now
 	        </button>
+	      	</div>
+	        
 	      </nav>
 	    </div>
   </section>
-  <section class="SectionToPpl wrapper">
+  <section  id='Scroll'class="SectionToPpl wrapper">
 	    <div class="SectionToPpl__flex">
 	      <h2 class="SectionToPpl__h">
 	        Say Hello
@@ -262,7 +265,7 @@
 	  <section class="sectionForm sectionFormTwo wrapper">
 	    <div class="sectionForm__flex sectionFormTwo__flex">
 	      <h2 class="sectionForm__h sectionFormTwo__h">
-	        Le'ts Change
+	        Let's Change
 	      </h2>
 	      <p class="sectionFormTwo__p">
 	        Together we can give a better life of style and fashion to Plus PPL who
@@ -292,7 +295,7 @@
 	          &nbsp;&nbsp;&nbsp;Email <br />
 	          <input
 	            type="email"
-	            class="sectionForm__form_input"
+	            class="sectionForm__form_input sectionForm__form_inputLast"
 	            placeholder="Email"
 	          />
 	        </label>
@@ -328,7 +331,7 @@
 		    <ul class="footer__ul">
 		      <li class="footer__li"><h3 class="footer__li_h">Contacts</h3></li>
 		      <li class="footer__li">
-		        <p class="footer__li_p">Follow us on</p>
+		        <p class="footer__li_p footer__instaIcon">Follow us on</p>
 		      </li>
 		      <li class="footer__li">
 		        <p class="footer__li_p">Email: <br><br>
@@ -340,8 +343,8 @@
 		  	<div class="footer__logotype">
 			      	<img src="./img/svg/logoMobailFooter.svg" alt="LogotypeImg" />
 			</div>
-			<a class="footer__li_p">Follow us on</a>
-			<a href="#" class="footer__li_mail">Contact: Info@plusppl.com</a>
+			<a href="#" class="footer__li_p footer__instaIcon">Follow us on</a>
+			<a href="mailto:info@plusppl.com" class="footer__li_mail">Contact: Info@plusppl.com</a>
 
 			 <a href="#ScrollTop" class="footer__scrollTopMobile">
 		  			Scroll to top
@@ -367,7 +370,7 @@
 		<button class="modalContainer__join_closer"></button>
 		  <section class="sectionForm wrapper">
 	    <div class="sectionForm__flex">
-	      <h2 class="sectionForm__h">
+	      <h2 class="sectionForm__h sectionForm__h_rose">
 	        Join Now
 	      </h2>
 	      <form action="#" method="POST" class="joinFormMobail">
@@ -401,7 +404,7 @@
 	            />
 	          </label>
 	        </p>
-	        <button class="sectionForm__form_button btnSignUp btnSignUp__join">Sign UP</button>
+	        <button class=" btnSignUp btnSignUp__join">Sign UP</button>
 	        <button class="sectionForm__form_buttonInsta btnInsta btnInsta__join">
 	          Sign UP via Instagram
 	        </button>
@@ -663,7 +666,8 @@
 
    <!-- СКРЫТОЕ МЕНЮ -->
  <div class="navigation__menu">
-          <div class="menuBoxes__closerAndLogo">
+ 	<div class="navigation__menu_obertka">
+ 		<div class="menuBoxes__closerAndLogo">
             <button class="navigation__menu_buttonCloser"></button>
             <div class="navigation__menu_logotype">
               <img src="./img/svg/LogoMenu.svg" alt="" class="navigation__menu_logotypeImg" />
@@ -690,6 +694,13 @@
               <a href="#" class="navigation__menu_p">Our vision</a>
             </li>
           </ul>
+          <div class="navigation__menu_backGround">
+ 		
+ 	</div>
+ 	</div>
+ 	
+ 	
+          
  </div>
 
 <script src="./js/jquery.min.js"></script>
