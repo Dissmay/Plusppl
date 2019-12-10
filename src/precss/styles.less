@@ -991,8 +991,8 @@ svg {
      .media(
       550px,
       {height: 361px;
-        width: 103px;
-        bottom:0px;
+        width: 145px;
+        top:450px;
         right:0px;}
     );
   }
@@ -1125,6 +1125,16 @@ svg {
       display:none;
 
       });
+    .media(500px,{
+      display:block;
+     background-image: url(../img/svg/RoseImageLeftMobail.svg);
+   
+     width: 230px;
+     top: 30px;
+     left:80px;
+     opacity:10;
+
+      });
   }
   &:after {
     content: "";
@@ -1141,7 +1151,7 @@ svg {
       background-image:url(../img/svg/RoseImageRightMobail.svg);
       height: 250px;
       width: 160px;
-      bottom:0;
+      bottom:-60px;
       top:auto;
      
       left: 10px;
@@ -1338,13 +1348,18 @@ svg {
     &_p {
       margin-bottom: 28px;
       display:block;
+      font-size:18px;
       text-decoration:none;
       color:#fff;
       font-family:Rubik plus;
+      &:last-child {
+        font-family:lato;
+      }
      
       .media(600px,{
        margin-bottom: 20px;
       });
+
 
     }
     &_mail{
